@@ -19,14 +19,38 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Yeni</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Popüler</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Tür
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Aksiyon</a>
+                                <a class="dropdown-item" href="#">Korku</a>
+                                <a class="dropdown-item" href="#">Spor</a>
+                                <a class="dropdown-item" href="#">Strateji</a>
+                                <a class="dropdown-item" href="#">Simülasyon</a>
+                                <a class="dropdown-item" href="#">Hayatta Kalma</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Hakkımızda</a>
                         </li>
                     </ul>
                 </div>
             </div>
+            <form class="form-inline">
+                <button class="btn btn-sm btn-outline-secondary" type="button">Giriş Yap</button>
+                <button class="btn btn-sm btn-outline-secondary" type="button">Kayıt Ol</button>
+            </form>
+            <form>
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Aramak için bir kelime giriniz...">
+                <button class="btn btn-sm btn-outline-secondary" type="submit">Arama</button>
+            </form>
         </nav>
     </header>
     <div class="container">
