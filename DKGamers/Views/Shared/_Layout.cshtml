@@ -4,56 +4,110 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - DKGamers</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+ 
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-dark text-white border-bottom box-shadow mb-3 border border-warning">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">DKGamers</a>
+                <a class="navbar-brand text-white" asp-area="" asp-controller="Home" asp-action="Index">
+                <span class="icon icon-bike"></span>
+                </a>
+              
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Yeni</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="" asp-action="">Yeni</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Popüler</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="" asp-action="">Popüler</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Tür
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Aksiyon</a>
-                                <a class="dropdown-item" href="#">Korku</a>
-                                <a class="dropdown-item" href="#">Spor</a>
-                                <a class="dropdown-item" href="#">Strateji</a>
-                                <a class="dropdown-item" href="#">Simülasyon</a>
-                                <a class="dropdown-item" href="#">Hayatta Kalma</a>
-                            </div>
-                        </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Tür
+                        </a>
+                        <div class="dropdown-menu dropright" aria-labelledby="navbarDropdown">
+                          <a class="nav-link dropdown-toggle text-white" href="#" id="tek" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tek Oyunculu</a>
+                          <ul class="dropdown-menu" aria-labelledby="tek">
+                            <li class="dropdown-item text-white" href="#">
+                              <a>Aksiyon</a>
+                            </li>
+                            <li class="dropdown-item text-white" href="#">
+                              <a>Korku</a>
+                            </li>
+                            <li class="dropdown-item text-white" href="#">
+                              <a>Spor</a>
+                            </li>
+                            <li class="dropdown-item text-white" href="#">
+                              <a>Strateji</a>
+                            </li>
+                            <li class="dropdown-item text-white" href="#">
+                              <a>Simülasyon</a>
+                            </li>
+                            <li class="dropdown-item text-white" href="#">
+                              <a>Hayatta</a>
+                            </li>
+                          </ul>
+                          <a class="nav-link dropdown-toggle text-white" href="#" id="cok" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Çok Oyunculu</a>
+                          <ul class="dropdown-menu" aria-labelledby="cok">
+                            <li class="dropdown-item text-white" href="#">
+                              <a>Aksiyon</a>
+                            </li>
+                            <li class="dropdown-item text-white" href="#">
+                              <a>Korku</a>
+                            </li>
+                            <li class="dropdown-item text-white" href="#">
+                              <a>Spor</a>
+                            </li>
+                            <li class="dropdown-item text-white" href="#">
+                              <a>Strateji</a>
+                            </li>
+                            <li class="dropdown-item text-white" href="#">
+                              <a>Simülasyon</a>
+                            </li>
+                            <li class="dropdown-item text-white" href="#">
+                              <a>Hayatta Kalma</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                          
+                          
+                          
+                         
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Hakkımızda</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="" asp-action="">Hakkımızda</a>
                         </li>
                     </ul>
                 </div>
-            </div>
+           </div>
             <form class="form-inline">
-                <button class="btn btn-sm btn-outline-secondary" type="button">Giriş Yap</button>
-                <button class="btn btn-sm btn-outline-secondary" type="button">Kayıt Ol</button>
+              <input class="form-control mr-sm-2 w-25" type="text" style="margin-right:5px;" placeholder="kullanici adinizi giriniz" aria-label="aranacak kelimeyi al"/>
+              <input class="form-control mr-sm-2 w-25" style="margin-right:5px;" type="text" placeholder="sifrenizi giriniz" aria-label="aranacak kelimeyi al"/>
+              
+                <button class="btn btn-warning text-white mb-2" style="margin-right:5px; margin-top:1%" type="button">Giriş Yap</button>
+                <button class="btn btn-warning text-white mb-2" style="margin-top:1%" type="button">Kayıt Ol</button>
             </form>
-            <form>
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Aramak için bir kelime giriniz..."/>
-                <button class="btn btn-sm btn-outline-secondary" type="submit">Arama</button>
-            </form>
+         
         </nav>
+      
+       <nav class="navbar" style="margin-left:75%; margin-bottom:2%">
+        <form class="form-inline">
+            <input class="form-control mr-sm-1"  type="search" placeholder="Ara" aria-label="aranacak kelimeyi al"/>
+            <button class="btn btn-sm btn-outline-secondary" type="submit">Arama</button>
+        </form>
+      </nav>
+      
     </header>
-    <div class="container">
+  
+    
+    <div class="container-fluid">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
@@ -61,12 +115,15 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2020 - DKGamers - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+           &copy; 2020 - DKGamers - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
     @RenderSection("Scripts", required: false)
 </body>
 </html>
+
+

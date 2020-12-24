@@ -69,3 +69,34 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/*.nav-item a:hover {
+    background-color:#ffd800;
+    color:#000000;
+    border-style:solid;
+}*/
+
+
+.icon {
+    display:block;
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+}
+
+.icon-bike {
+    background-image: url(https://icons.getbootstrap.com/icons/house.svg);
+}
+
+    .icon-bike:hover,
+    .icon-bike:focus {
+        background-image: url(https://icons.getbootstrap.com/icons/house-fill.svg);
+       
+    }
+
+}
+
+.container {
+    min-width: 100%;
+}
