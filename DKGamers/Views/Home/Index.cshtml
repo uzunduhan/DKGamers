@@ -1,202 +1,60 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model HaberListViewModel
 
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <div class="container">
-
-                <div class="row justify-content-between">
-                    <div class="col-8 d-flex align-items-center" style="background-color:red;">
-
-
-                        <div class="col-5" style="background-color:gray;">
-                            <img src="" class="img-fluid" alt="Responsive image">
+<div class="container-fluid" id="haber">
+    <div class="row justify-content-between">
+        <div class="col-8">
+            @foreach (var item in Model.haberler)
+            {
+                <div class="row">
+                    <div class="col-12 d-flex align-items-center" style="border:solid;">
+                        <div class="col-5">
+                            <img src="~/img/haber/@item.HaberResim" alt="..." class="img-thumbnail">
                         </div>
-
-                        <div class="col-7" style="background-color:green;">
-                            <textarea class="form-control" id="exampleFormControlTextarea1"></textarea>
-
-                        </div>
-
-
-                    </div>
-
-
-
-
-                </div>
-                <br />
-                <div class="row justify-content-between">
-                    <div class="col-8 d-flex align-items-center" style="background-color:red;">
-                        <div class="col-5" style="background-color:gray;">
-                            <img src="" class="img-fluid" alt="Responsive image">
-                        </div>
-
-                        <div class="col-7" style="background-color:green;">
-                            <textarea readonly class="form-control-range" id="exampleFormControlTextarea1"></textarea>
-
-                        </div>
-                    </div>
-
-
-
-                </div>
-                <br />
-                <div class="row justify-content-between">
-                    <div class="col-8 d-flex align-items-center" style="background-color:red;">
-                        <div class="col-5" style="background-color:gray;">
-                            <img src="" class="img-fluid" alt="Responsive image">
-                        </div>
-
-                        <div class="col-7" style="background-color:green;">
-                            <textarea class="form-control-range" id="exampleFormControlTextarea1"></textarea>
-
-                        </div>
-                    </div>
-
-
-                </div>
-                <br />
-                <div class="row justify-content-between">
-                    <div class="col-8 d-flex align-items-center" style="background-color:red;">
-                        <div class="col-5" style="background-color:gray;">
-                            <img src="" class="img-fluid" alt="Responsive image">
-                        </div>
-
-                        <div class="col-7" style="background-color:green;">
-                            <textarea class="form-control-range" id="exampleFormControlTextarea1"></textarea>
-
+                        <div class="col-7" >
+                            <a style="color:white;" href="/home/detail/@item.HaberID">@item.HaberBaslik</a>
                         </div>
                     </div>
                 </div>
                 <br />
-                <div class="row justify-content-between">
-                    <div class="col-8 d-flex align-items-center" style="background-color:red;">
-                        <div class="col-5" style="background-color:gray;">
-                            <img src="" class="img-fluid" alt="Responsive image">
-                        </div>
-
-                        <div class="col-7" style="background-color:green;">
-                            <textarea class="form-control-range" id="exampleFormControlTextarea1"></textarea>
-
-                        </div>
-                    </div>
-                </div>
-                <br />
-
-                <div class="row justify-content-between">
-                    <div class="col-8 d-flex align-items-center" style="background-color:red;">
-                        <div class="col-5" style="background-color:gray;">
-                            <img src="" class="img-fluid" alt="Responsive image">
-                        </div>
-
-                        <div class="col-7" style="background-color:green;">
-                            <textarea class="form-control-range" id="exampleFormControlTextarea1"></textarea>
-
-                        </div>
-                    </div>
-                </div>
-                <br />
-
-                <div class="row justify-content-between">
-                    <div class="col-8 d-flex align-items-center" style="background-color:red;">
-                        <div class="col-5" style="background-color:gray;">
-                            <img src="" class="img-fluid" alt="Responsive image">
-                        </div>
-
-                        <div class="col-7" style="background-color:green;">
-                            <textarea class="form-control-range" id="exampleFormControlTextarea1"></textarea>
-
-                        </div>
-                    </div>
-                </div>
-                <br />
-
-                <div class="row justify-content-between">
-                    <div class="col-8 d-flex align-items-center" style="background-color:red;">
-                        <div class="col-5" style="background-color:gray;">
-                            <img src="" class="img-fluid" alt="Responsive image">
-                        </div>
-
-                        <div class="col-7" style="background-color:green;">
-                            <textarea class="form-control-range" id="exampleFormControlTextarea1"></textarea>
-
-                        </div>
-                    </div>
-                </div>
-                <br />
-                <div class="row justify-content-between">
-                    <div class="col-8 d-flex align-items-center" style="background-color:red;">
-                        <div class="col-5" style="background-color:gray;">
-                            <img src="" class="img-fluid" alt="Responsive image">
-                        </div>
-
-                        <div class="col-7" style="background-color:green;">
-                            <textarea class="form-control-range" id="exampleFormControlTextarea1"></textarea>
-
-                        </div>
-                    </div>
-                </div>
-                <br />
-                <div class="row justify-content-between">
-                    <div class="col-8 d-flex align-items-center" style="background-color:red;">
-                        <div class="col-5" style="background-color:gray;">
-                            <img src="" class="img-fluid" alt="Responsive image">
-                        </div>
-
-                        <div class="col-7" style="background-color:green;">
-                            <textarea class="form-control-range" id="exampleFormControlTextarea1"></textarea>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>   
+            }
         </div>
-
-
-        <div class="col-12">
-            <div class="container">
-
-                <div class="col-3" style="background-color:black;">
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">Active</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#">Disabled</a>
-                        </li>
-                    </ul>
-                </div>
-                <br />
-                <div class="col-3" style="background-color:black;">
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">Active</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#">Disabled</a>
-                        </li>
-                    </ul>
-                </div>
-
+            <div class="col-3" style="background-color:black;">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Active</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
             </div>
+    </div>
+</div>
+
+<br />
+<div class="container-fluid">
+    <div class="row justify-content-end">
+        <div class="col-3" style="background-color:black;">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Active</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
         </div>
-
-
     </div>
 </div>

@@ -11,6 +11,7 @@ namespace DKGamers.Controllers
 {
     public class HomeController : Controller
     {
+        private Context context = new Context();
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -20,9 +21,17 @@ namespace DKGamers.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var haberler = context.Haber.ToList();
+            return View(new HaberListViewModel()
+            {
+                haberler=haberler
+            });
         }
-
+        public IActionResult Detail(int id)
+        {
+            var haber = context.Haber.FirstOrDefault(i => i.HaberID == id);
+            return View(haber);
+        }
         public IActionResult Privacy()
         {
             return View();
