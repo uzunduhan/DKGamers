@@ -22,6 +22,7 @@ namespace DKGamers.Controllers
         public IActionResult Index()
         {
             var haberler = context.Haber.ToList();
+            haberler.Reverse();
             return View(new HaberListViewModel()
             {
                 haberler=haberler

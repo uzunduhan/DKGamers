@@ -1,8 +1,9 @@
 ﻿@model HaberListViewModel
 
-<div class="container-fluid" id="haber">
+<div class="container-fluid">
     <div class="row justify-content-between">
         <div class="col-8">
+
             @foreach (var item in Model.haberler)
             {
                 <div class="row">
@@ -10,7 +11,7 @@
                         <div class="col-5">
                             <img src="~/img/haber/@item.HaberResim" alt="..." class="img-thumbnail">
                         </div>
-                        <div class="col-7" >
+                        <div class="col-7">
                             <a style="color:white;" href="/home/detail/@item.HaberID">@item.HaberBaslik</a>
                         </div>
                     </div>
@@ -18,27 +19,23 @@
                 <br />
             }
         </div>
-            <div class="col-3" style="background-color:black;">
-                <ul class="nav flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Active</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
-                    </li>
-                </ul>
-            </div>
+        <div class="col-3" style="background-color:black;">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Active</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+        </div>
     </div>
-</div>
-
-<br />
-<div class="container-fluid">
     <div class="row justify-content-end">
         <div class="col-3" style="background-color:black;">
             <ul class="nav flex-column">
@@ -56,5 +53,11 @@
                 </li>
             </ul>
         </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row justify-content-end">
+       
     </div>
 </div>

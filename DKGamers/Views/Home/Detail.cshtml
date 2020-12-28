@@ -1,3 +1,13 @@
 ﻿@model Haber
 
-<h5>@Model.HaberIcerik</h5>
+<div class="col-12 text-center">
+    <h1><span class="badge badge-secondary">@Model.HaberBaslik</span></h1>
+</div>
+<br />
+<div class="text-center">
+    <img src="~/img/haber/@Model.HaberResim" alt="..." class="img-fluid">
+</div>
+<br />
+<div class="col-12">
+    <h4><span class="badge badge-secondary">@Model.HaberIcerik</span></h4>
+</div>
