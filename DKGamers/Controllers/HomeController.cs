@@ -23,9 +23,11 @@ namespace DKGamers.Controllers
         {
             var haberler = context.Haber.ToList();
             haberler.Reverse();
+            var item = haberler.Take(2);
+           
             return View(new HaberListViewModel()
             {
-                haberler=haberler
+                haberler=item.ToList()
             });
         }
         public IActionResult Detail(int id)

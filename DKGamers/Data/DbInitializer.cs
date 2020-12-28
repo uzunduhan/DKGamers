@@ -17,7 +17,7 @@ namespace DKGamers.Data
                     {
                         HaberID = 5, 
                         HaberBaslik = "Steam, 2020'nin En Çok Satan Oyunlarını Açıkladı", 
-                        HaberResim = "haber1.png", 
+                        HaberResim = "haber5.png", 
                         HaberIcerik = "Dünyanın en büyük dijital oyun mağazası olan Steam, 2020'nin en iyileri listesini yayınladı."+
                         "Listeye göre brüt gelirler ölçülen 2020'nin en çok satan 12 Steam oyunu;– Dota 2,- Grand Theft Auto V,– Red Dead Redemption 2,– Cyberpunk 2077,– Playerunknown’s Battlegrounds,– Doom Eternal,– Monster Hunter World,– "+
                         "Rainbow Six: Siege,– Destiny 2,– Fall Guys: Ultimate Knockout,– Counter - Strike: Global Offensive ve – Among Us oldu."
@@ -27,7 +27,7 @@ namespace DKGamers.Data
                     {
                         HaberID = 4,
                         HaberBaslik = "CD PROJEKT RED'e Cyberpunk 2077 Yüzünden İlk Dava Açıldı",
-                        HaberResim = "haber2.jpg",
+                        HaberResim = "haber4.jpg",
                         HaberIcerik = "Video oyun sektörünün son dönemlerdeki en çok tartışılan ismi, CD PROJEKT RED. Bunun nedeniyse, kısa bir süre önce piyasaya sürülen Cyberpunk 2077. Oyunda yaşanan sorunlar, şirketin oldukça ağır bir şekilde eleştirilmesine yol açtı." +
                         " Ancak şirket, sadece eleştirileri yutmak zorunda kalmayacak. Çünkü Rosen Law isimli bir şirket, CD PROJEKT RED'den davacı oldu.Rosen Law isimli hukuk şirketi tarafından açılan davaya göre CD PROJEKT RED,   Cyberpunk 2077'yi piyasaya sürmeden önce, " +
                         "oyuncuları ve yatırımcıları yanlış yönlendirdi. Şirket aslında, oyunun ne halde olduğunu biliyordu ancak bunu gizledi. Bu sayede de Cyberpunk 2077'nin hype'lanmaya devam etmesine neden olan CD PROJEKT RED, bir nevi haksız kazanç elde etmiş oldu." +
@@ -51,7 +51,7 @@ namespace DKGamers.Data
                     {
                          HaberID = 2,
                          HaberBaslik = "Steam'de Anlık Oyuncu Sayısında Rekor Kırıldı",
-                         HaberResim = "haber4.jpg",
+                         HaberResim = "haber2.jpg",
                          HaberIcerik = "Koronavirüsün de etkisiyle hafta sonunu evde geçiren milyonlarca oyun sever, Steam’e akın etti. Ünlü oyun platformunda 24 milyon 804 bin 148 kullanıcı aynı anda aktif oldu. 25 milyona yakın kullanıcının Steam’de aktif olmasında en büyük etkenlerinden biri, uygulamanın bilgisayar açılınca" +
                          " otomatik aktif olması. Ancak Steam, anlık oyuncu sayısında da 7 milyonu görerek kendi rekorunu bir kez daha kırdı.25 milyon kullanıcı içinde Steam’de oyun oynayan 7 milyon kişinin oynadıkları oyunların başında Counter - Strike: Global Offensive(1.062.017 kullanıcı), Cyberpunk 2077(1.047.602 kullanıcı) ve " +
                          "Playerunknown’s Battlegrounds(648.889 kullanıcı) bulunuyor.Tek oyunculu bir oyun olmasına rağmen neredeyse CS:GO ile aynı oyuncu sayısına erişen Cyberpunk 2077 ise anlık olarak 654.963 oyuncu sayısına ulaştı.Steam’in bundan önceki rekoru koronavirüsün dünya çapında yayılmaya başladığı aylarda gelmişti.Mart 2020‘de 22 milyon" +
@@ -62,7 +62,7 @@ namespace DKGamers.Data
                     {
                         HaberID = 1,
                         HaberBaslik = "The Game Awards 2020 Kazananları Açıklandı",
-                        HaberResim = "haber5.jpg",
+                        HaberResim = "haber1.jpg",
                         HaberIcerik = "Dünyanın en büyük video oyun ödül organizasyonlarından bir tanesi olan The Game Awards 2020 etkinlikleri, Türkiye saati ile gece 03:00 sularında gerçekleşti. 2020'nin en'lerinin seçildiği seçildiği etkinlikler kapsamında da herkesin tahmin edebileceği bazı oyunlar, çeşitli ödüllere layık görüldü.İşte The Game Awards 2020'nin tüm kazananları:" +
                         "Yılın Oyunu: The Last of Us: Part II " +
                         "Oyuncunun Sesi: Ghost of Tsushima " +
