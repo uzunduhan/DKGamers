@@ -16,6 +16,10 @@ namespace DKGamers.Models
 
         //public string Yorum { get; set; }
         public int BegenilmeSayisi { get; set; }
-        public ICollection <Kategori> Kategori { get; set; }
+
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        public DateTime CıkısTarihi { get; set; }
+        public IList<OyunKategorisi> OyunKategorileri { get; set; }
     }
 }

@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DKGamers.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20201228073612_haberEklendi")]
-    partial class haberEklendi
+    [Migration("20201228115807_ekle")]
+    partial class ekle
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -46,14 +46,14 @@ namespace DKGamers.Migrations
                             HaberID = 5,
                             HaberBaslik = "Steam, 2020'nin En Çok Satan Oyunlarını Açıkladı",
                             HaberIcerik = "Dünyanın en büyük dijital oyun mağazası olan Steam, 2020'nin en iyileri listesini yayınladı.Listeye göre brüt gelirler ölçülen 2020'nin en çok satan 12 Steam oyunu;– Dota 2,- Grand Theft Auto V,– Red Dead Redemption 2,– Cyberpunk 2077,– Playerunknown’s Battlegrounds,– Doom Eternal,– Monster Hunter World,– Rainbow Six: Siege,– Destiny 2,– Fall Guys: Ultimate Knockout,– Counter - Strike: Global Offensive ve – Among Us oldu.",
-                            HaberResim = "haber1.png"
+                            HaberResim = "haber5.png"
                         },
                         new
                         {
                             HaberID = 4,
                             HaberBaslik = "CD PROJEKT RED'e Cyberpunk 2077 Yüzünden İlk Dava Açıldı",
                             HaberIcerik = "Video oyun sektörünün son dönemlerdeki en çok tartışılan ismi, CD PROJEKT RED. Bunun nedeniyse, kısa bir süre önce piyasaya sürülen Cyberpunk 2077. Oyunda yaşanan sorunlar, şirketin oldukça ağır bir şekilde eleştirilmesine yol açtı. Ancak şirket, sadece eleştirileri yutmak zorunda kalmayacak. Çünkü Rosen Law isimli bir şirket, CD PROJEKT RED'den davacı oldu.Rosen Law isimli hukuk şirketi tarafından açılan davaya göre CD PROJEKT RED,   Cyberpunk 2077'yi piyasaya sürmeden önce, oyuncuları ve yatırımcıları yanlış yönlendirdi. Şirket aslında, oyunun ne halde olduğunu biliyordu ancak bunu gizledi. Bu sayede de Cyberpunk 2077'nin hype'lanmaya devam etmesine neden olan CD PROJEKT RED, bir nevi haksız kazanç elde etmiş oldu.Rosen Law tarafından açılan davanın şu an için bilindik bir katılımcısı yok.Ancak şirket,özellikle de yatırımcıların bu davaya dahil olmaları gerektiğini,hisse senedi değerlerinin ortada olduğunu ifade ediyor.Ayrıca dileyen oyuncuların da davaya dahil olabileceğini söyleyen hukuk şirketi,davaya dahil olmak isteyenlere de bir çevrimiçi form sunuyor.Yaşanan olay,CD PROJEKT RED için bir ilk niteliğinde.Ancak bu durum, son olmayabilir.Çünkü geliştirici şirketin ana vatanı olan Polonya'da da yatırımcılar, şirkete karşı yaptırım planları üzerinde yoğunlaşmış durumdalar. Tüm bu olayların nasıl sonuçlanacağı bilinmiyor ancak CD PROJEKT RED'i oldukça zorlu günlerin beklediğini şimdiden söyleyebiliriz.",
-                            HaberResim = "haber2.jpg"
+                            HaberResim = "haber4.jpg"
                         },
                         new
                         {
@@ -67,15 +67,101 @@ namespace DKGamers.Migrations
                             HaberID = 2,
                             HaberBaslik = "Steam'de Anlık Oyuncu Sayısında Rekor Kırıldı",
                             HaberIcerik = "Koronavirüsün de etkisiyle hafta sonunu evde geçiren milyonlarca oyun sever, Steam’e akın etti. Ünlü oyun platformunda 24 milyon 804 bin 148 kullanıcı aynı anda aktif oldu. 25 milyona yakın kullanıcının Steam’de aktif olmasında en büyük etkenlerinden biri, uygulamanın bilgisayar açılınca otomatik aktif olması. Ancak Steam, anlık oyuncu sayısında da 7 milyonu görerek kendi rekorunu bir kez daha kırdı.25 milyon kullanıcı içinde Steam’de oyun oynayan 7 milyon kişinin oynadıkları oyunların başında Counter - Strike: Global Offensive(1.062.017 kullanıcı), Cyberpunk 2077(1.047.602 kullanıcı) ve Playerunknown’s Battlegrounds(648.889 kullanıcı) bulunuyor.Tek oyunculu bir oyun olmasına rağmen neredeyse CS:GO ile aynı oyuncu sayısına erişen Cyberpunk 2077 ise anlık olarak 654.963 oyuncu sayısına ulaştı.Steam’in bundan önceki rekoru koronavirüsün dünya çapında yayılmaya başladığı aylarda gelmişti.Mart 2020‘de 22 milyon anlık kullanıcıya erişen Steam, üst üste 3 defa rekor kırmıştı.",
-                            HaberResim = "haber4.jpg"
+                            HaberResim = "haber2.jpg"
                         },
                         new
                         {
                             HaberID = 1,
                             HaberBaslik = "The Game Awards 2020 Kazananları Açıklandı",
                             HaberIcerik = "Dünyanın en büyük video oyun ödül organizasyonlarından bir tanesi olan The Game Awards 2020 etkinlikleri, Türkiye saati ile gece 03:00 sularında gerçekleşti. 2020'nin en'lerinin seçildiği seçildiği etkinlikler kapsamında da herkesin tahmin edebileceği bazı oyunlar, çeşitli ödüllere layık görüldü.İşte The Game Awards 2020'nin tüm kazananları:Yılın Oyunu: The Last of Us: Part II Oyuncunun Sesi: Ghost of Tsushima En İyi Oyun Yönetmenliği: The Last of Us: Part II En İyi Anlatı: The Last of Us: Part II En İyi Sanat Yönetmenliği: Ghost of Tsushima En İyi Ses Tasarımı: The Last of Us: Part II En İyi Müzik: Final Fantasy VII RemakeKarakterler Bazında En İyi Performans: The Last of Us: Part II En Çok Etkileyen Oyun: Tell Me Why Devam Etmekte Olan En İyi Oyun: No Man's Sky En İyi Indie Oyun: Hades En İyi Mobil Oyun: Among Us En İyi Topluluk Desteği Veren Oyun: Fall Guys: Ultimate Knockout En İyi Sanal Gerçeklik / Artırılmış Gerçeklik Oyunu: Half - Life: Alyx En İyi Erişilebilirlikte Yenilik Oyunu: The Last of Us: Part II En İyi Aksiyon Oyunu: Hades En İyi Aksiyon/Macera Oyunu: The Last of Us: Part II En İyi RPG Oyunu: Final Fantasy VII Remake En İyi Dövüş Oyunu: Mortal Kombat 11 Ultimate En İyi Aile Oyunu: Animal Crossing: New Horizons En İyi Simülasyon / Strateji Oyunu: Microsoft Flight Simulator En İyi Spor / Yarış Oyunu: Tony Hawk’s Pro Skater 1 + 2 En İyi Çok Oyunculu Oyun: Among Us En Çok Beklenen Oyun: Elden Ring En İyi İçerik Üreticisi: Valkyrae En İyi Çıkış Yapan Oyun: Phasmophobia En İyi E - spor Oyunu: League of Legends En İyi E - spor Takımı: G2 EsportsEn İyi E - spor Etkinliği: League of Legends",
-                            HaberResim = "haber5.jpg"
+                            HaberResim = "haber1.jpg"
                         });
+                });
+
+            modelBuilder.Entity("DKGamers.Models.Kategori", b =>
+                {
+                    b.Property<int>("KategoriID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("OyunKategori")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OyunTuru")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("KategoriID");
+
+                    b.ToTable("Kategori");
+                });
+
+            modelBuilder.Entity("DKGamers.Models.Oyun", b =>
+                {
+                    b.Property<int>("OyunID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("Aciklama")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("BegenilmeSayisi")
+                        .HasColumnType("int");
+
+                    b.Property<string>("OyunAdi")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Resim")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("OyunID");
+
+                    b.ToTable("Oyun");
+                });
+
+            modelBuilder.Entity("DKGamers.Models.OyunKategorisi", b =>
+                {
+                    b.Property<int>("OyunID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("KategoriID")
+                        .HasColumnType("int");
+
+                    b.HasKey("OyunID", "KategoriID");
+
+                    b.HasIndex("KategoriID");
+
+                    b.ToTable("OyunKategorisi");
+                });
+
+            modelBuilder.Entity("DKGamers.Models.OyunKategorisi", b =>
+                {
+                    b.HasOne("DKGamers.Models.Kategori", "Kategoriler")
+                        .WithMany("OyunKategorileri")
+                        .HasForeignKey("KategoriID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("DKGamers.Models.Oyun", "Oyunlar")
+                        .WithMany("OyunKategorileri")
+                        .HasForeignKey("OyunID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Kategoriler");
+
+                    b.Navigation("Oyunlar");
+                });
+
+            modelBuilder.Entity("DKGamers.Models.Kategori", b =>
+                {
+                    b.Navigation("OyunKategorileri");
+                });
+
+            modelBuilder.Entity("DKGamers.Models.Oyun", b =>
+                {
+                    b.Navigation("OyunKategorileri");
                 });
 #pragma warning restore 612, 618
         }

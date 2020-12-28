@@ -12,6 +12,6 @@ namespace DKGamers.Models
         public int KategoriID { get; set; }
         public string OyunKategori { get; set; }
         public string OyunTuru { get; set; }
-        public Oyun Oyun { get; set; }
+        public IList<OyunKategorisi> OyunKategorileri { get; set; }
     }
 }

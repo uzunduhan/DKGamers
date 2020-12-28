@@ -1,0 +1,36 @@
+﻿@model Oyun
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4">
+            <img src="~/img/oyun/@Model.Resim" alt="..." class="img-fluid">
+        </div>
+
+
+
+        <div class="col-4">
+            <h1><span class="badge badge-secondary">@Model.Resim</span></h1>
+        </div>
+        <br />
+        <div class="col-3">
+            <h4><span class="badge badge-secondary">@Model.Aciklama.Replace("<br/>", "\n")</span></h4>
+        </div>
+
+
+
+
+    </div>
+
+</div>
+
+<form class="form-group">
+    
+    <button type="button" class="btn btn-info">+</button>
+    <button type="button" class="btn btn-danger">-</button>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Yorum</span>
+        </div>
+        <textarea class="form-control" aria-label="With textarea"></textarea>
+    </div>
+</form>

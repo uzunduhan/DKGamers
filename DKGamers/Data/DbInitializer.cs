@@ -18,7 +18,7 @@ namespace DKGamers.Data
                         HaberID = 5, 
                         HaberBaslik = "Steam, 2020'nin En Çok Satan Oyunlarını Açıkladı", 
                         HaberResim = "haber5.png", 
-                        HaberIcerik = "Dünyanın en büyük dijital oyun mağazası olan Steam, 2020'nin en iyileri listesini yayınladı."+
+                        HaberIcerik = "Dünyanın en büyük dijital oyun mağazası olan Steam, 2020'nin en iyileri listesini yayınladı.\n"+
                         "Listeye göre brüt gelirler ölçülen 2020'nin en çok satan 12 Steam oyunu;– Dota 2,- Grand Theft Auto V,– Red Dead Redemption 2,– Cyberpunk 2077,– Playerunknown’s Battlegrounds,– Doom Eternal,– Monster Hunter World,– "+
                         "Rainbow Six: Siege,– Destiny 2,– Fall Guys: Ultimate Knockout,– Counter - Strike: Global Offensive ve – Among Us oldu."
                     },
