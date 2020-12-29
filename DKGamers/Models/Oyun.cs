@@ -13,6 +13,10 @@ namespace DKGamers.Models
         public string Resim { get; set; }
         public string OyunAdi { get; set; }
         public string Aciklama { get; set; }
+        public string Gelistirici { get; set; }
+        public string Yayinlayici { get; set; }
+
+        //public string OyunTuru { get; set; }
 
         //public string Yorum { get; set; }
         public int BegenilmeSayisi { get; set; }
@@ -20,6 +24,6 @@ namespace DKGamers.Models
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime CıkısTarihi { get; set; }
-        public IList<OyunKategorisi> OyunKategorileri { get; set; }
+        public List<OyunKategorisi> OyunKategorileri { get; set; }
     }
 }

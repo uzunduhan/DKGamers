@@ -8,9 +8,9 @@ namespace DKGamers.Models
     public class OyunKategorisi
     {
         public int OyunID { get; set; }
-        public Oyun Oyunlar { get; set; }
+        public Oyun Oyun { get; set; }
 
         public int KategoriID { get; set; }
-        public Kategori Kategoriler { get; set; }
+        public Kategori Kategori { get; set; }
     }
 }

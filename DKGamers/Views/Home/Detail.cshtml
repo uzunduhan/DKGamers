@@ -1,13 +1,11 @@
 ﻿@model Haber
 
 <div class="col-12 text-center">
-    <h1><span class="badge badge-secondary">@Model.HaberBaslik</span></h1>
+    <h1><span style="color:white;">@Model.HaberBaslik</span></h1>
 </div>
 <br />
 <div class="text-center">
-    <img src="~/img/haber/@Model.HaberResim" alt="..." class="img-fluid">
+    <img src="~/img/haber/@Model.HaberResim" alt="..." class="img-fluid" style="width:60%; height:60%; margin-bottom:1%">
+    <p class="text-white">@Model.HaberIcerik</p>
 </div>
-<br />
-<div class="col-12">
-    <h4><span class="badge badge-secondary">@Model.HaberIcerik</span></h4>
-</div>
+
