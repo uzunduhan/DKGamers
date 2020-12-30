@@ -13,7 +13,5 @@ namespace DKGamers.Models
         public string HaberResim { get; set; }
         public string HaberBaslik { get; set; }
         public string HaberIcerik { get; set; }
-        //public int AuthorID { get; set; }
-        //public Haber Author { get; set; }
     }
 }

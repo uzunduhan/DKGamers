@@ -1,66 +1,23 @@
 ﻿@model OyunListViewModel
+
 <div class="container-fluid">
-    <div class="row justify-content-between">
-        <div class="col-8">
-            @foreach (var item in Model.oyunlar)
+    <div class="row justify-content-center">
+        <div class="col-10">
+            @foreach (var item in Model.Oyunlar)
             {
                 <div class="row">
-                    <div class="col-12 d-flex align-items-center"  style="border:solid;">
+                    <div class="col-12 d-flex align-items-center" style="border:solid;border-color:black;padding:5px;">
                         <div class="col-5">
-                            <img src="~/img/oyun/@item.Resim" class="img-fluid" alt="Responsive image">
+                            <img src="~/img/oyun/@item.Resim" alt="..." class="img-thumbnail">
                         </div>
-                        <div class="container">
-                            <div class="form-inline">
-                                <a style="color:white;" href="/Yeni/Detail/@item.OyunID">@item.OyunAdi</a>
-                            </div>
-                            <div class="form-inline">
-                                <h4 style="color:white;">@item.CıkısTarihi.ToShortDateString()<span class="badge badge-secondary"></span></h4>
-                            </div>
+                        <div class="col-7">
+                            <p style="color:white;">Oyun: <a style="color:white;" href="/yeni/detail/@item.OyunID">@item.OyunAdi</a></p>
+                            <p style="color:white;">Çıkış Tarihi: @item.PiyasayaSurulmeTarihi.ToShortDateString()</p>
                         </div>
                     </div>
                 </div>
                 <br />
             }
-            </div>
-
-        <div class="col-3" style="background-color:black;">
-            <ul class="nav flex-column">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Active</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-<br />
-<div class="container-fluid">
-    <div class="row justify-content-between">
-        <div class="col-8">                   
-        </div>
-        <div class="col-3" style="background-color:black;">
-            <ul class="nav flex-column">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Active</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
-            </ul>
         </div>
     </div>
 </div>

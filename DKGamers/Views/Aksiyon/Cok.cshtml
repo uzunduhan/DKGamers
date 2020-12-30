@@ -1,9 +1,8 @@
 ﻿@model OyunListViewModel
-aksiyon cift
 
-@foreach (var item in Model.oyunlar)
+@foreach (var item in Model.Oyunlar)
 {
-<h5 class="text-white">
-    @item.Aciklama;
-</h5>
+    <h5 class="text-white">
+        @item.OyunAdi
+    </h5>
 }

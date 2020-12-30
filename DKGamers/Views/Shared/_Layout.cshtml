@@ -6,18 +6,14 @@
     <title>@ViewData["Title"] - DKGamers</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="~/css/site.css" />
-
-
-
 </head>
 <body style="background-color:#282828">
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-dark text-white border-bottom box-shadow mb-3 border border-warning">
             <div class="container">
                 <a class="navbar-brand text-white" asp-area="" asp-controller="Home" asp-action="Index">
-                    <span class="icon icon-bike"></span>
+                    <span class="icon icon-home"></span>
                 </a>
-
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -40,7 +36,7 @@
                                     <a class="nav-link text-white" asp-area="" asp-controller="Korku" asp-action="Tek">Korku</a>
                                 </li>
                                 <li class="dropdown-item text-white" href="#">
-                                    <a class="nav-link text-white" asp-area="" asp-controller="Spor" asp-action="Tek">Spor</a>
+                                    <a class="nav-link text-white" asp-area="" asp-controller="Spor" asp-action="Tek">Spor/Yarış</a>
                                 </li>
                                 <li class="dropdown-item text-white" href="#">
                                     <a class="nav-link text-white" asp-area="" asp-controller="Strateji" asp-action="Tek">Strateji</a>
@@ -64,7 +60,7 @@
                                     <a class="nav-link text-white" asp-area="" asp-controller="Korku" asp-action="Cok">Korku</a>
                                 </li>
                                 <li class="dropdown-item text-white" href="#">
-                                    <a class="nav-link text-white" asp-area="" asp-controller="Spor" asp-action="Cok">Spor</a>
+                                    <a class="nav-link text-white" asp-area="" asp-controller="Spor" asp-action="Cok">Spor/Yarış</a>
                                 </li>
                                 <li class="dropdown-item text-white" href="#">
                                     <a class="nav-link text-white" asp-area="" asp-controller="Strateji" asp-action="Cok">Strateji</a>
@@ -77,46 +73,35 @@
                                 </li>
                             </ul>
                         </li>
-
-
-
-
-
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-area="" asp-controller="Hakkinda" asp-action="Index">Hakkımızda</a>
                         </li>
                     </ul>
                 </div>
-
-                <form class="form-inline">
-                    <input class="form-control mr-sm-2 w-25" type="text" style="margin-right:5px;" placeholder="Kullanıcı Adı" aria-label="aranacak kelimeyi al" />
-                    <input class="form-control mr-sm-2 w-25" style="margin-right:5px;" type="text" placeholder="Şifre" aria-label="aranacak kelimeyi al" />
-
-                    <button class="btn btn-warning text-white mb-2" style="margin-right:5px; margin-top:1%" type="button">Giriş Yap</button>
-                    <button class="btn btn-warning text-white mb-2" style="margin-top:1%" type="button">Kayıt Ol</button>
-                </form>
-
-
-
-                <select class="selectpicker" data-width="fit">
-                    <a href="#cz">
-                        <option data-content='<span class="flag-icon flag-icon-cz"></span> English'>Čeština</option>
-                    </a>
-                    <a href="#de">
-
-                        <option data-content='<span class="flag-icon flag-icon-de"></span> Español'>Deutsch</option>
-                    </a>
-                    <a href="#en">
-
-                        <option data-content='<span class="flag-icon flag-icon-gb"></span> Español'>English</option>
-                    </a>
-                </select>
-
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <form class="form-inline">
+                        <a asp-area="" asp-controller="Home" asp-action="Index">
+                            <span class="icon icon-comment" style=" margin-right: 10px"></span>
+                        </a>
+                        <a asp-area="" asp-controller="Home" asp-action="Index">
+                            <span class="icon icon-like" style=" margin-right: 10px"></span>
+                        </a>
+                        <a asp-area="" asp-controller="Home" asp-action="Index">
+                            <span class="icon icon-profile" style=" margin-right: 10px"></span>
+                        </a>
+                        <button class="btn btn-warning text-white mb-2" style="margin-top:1%;" type="submit" asp-area="" asp-controller="Giris" asp-action="Cikis">Çıkış Yap</button>
+                    </form>
+                }
+                else
+                {
+                    <form class="form-inline">
+                        <button class="btn btn-warning text-white mb-2" style="margin-top:1%; margin-right:5px" type="submit" asp-area="" asp-controller="Giris" asp-action="Index">Giriş Yap</button>
+                        <button class="btn btn-warning text-white mb-2" style="margin-top:1%" type="submit" asp-area="" asp-controller="Kayit" asp-action="Index">Kayıt Ol</button>
+                    </form>
+                }
             </div>
-
-
         </nav>
-
         <div class="row justify-content-end">
             <form class="form-inline">
                 <input class="form-control mr-sm-1" type="search" placeholder="Ara" aria-label="aranacak kelimeyi al" />
@@ -124,16 +109,12 @@
             </form>
         </div>
         <br />
-
     </header>
-
-
-    <div class="container-fluid" >
+    <div class="container-fluid">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
-
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2020 - DKGamers - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
@@ -142,10 +123,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
- 
-
     @RenderSection("Scripts", required: false)
 </body>
 </html>
-
 

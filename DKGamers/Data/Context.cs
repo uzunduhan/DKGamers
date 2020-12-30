@@ -17,7 +17,7 @@ namespace DKGamers.Models
         public DbSet<OyunKategorisi> OyunKategorisi { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=DESKTOP-NJEA2TT\SQLEXPRESS; Database=DKGamers; trusted_connection=true;");
+            optionsBuilder.UseSqlServer(@"Server=DESKTOP-NJEA2TT\SQLEXPRESS; Database=DKGamersDB; trusted_connection=true;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

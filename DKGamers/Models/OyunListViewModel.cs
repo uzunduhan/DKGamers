@@ -7,6 +7,6 @@ namespace DKGamers.Models
 {
     public class OyunListViewModel
     {
-        public List<Oyun> oyunlar { get; set; }
+        public List<Oyun> Oyunlar { get; set; }
     }
 }

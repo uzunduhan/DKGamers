@@ -10861,11 +10861,38 @@ dropbtn {
     background-size: cover;
 }
 
-.icon-bike {
+.icon-home {
     background-image: url(https://icons.getbootstrap.com/icons/house-fill.svg);
 }
 
-    .icon-bike:hover,
-    .icon-bike:focus {
+    .icon-home:hover,
+    .icon-home:focus {
         background-image: url(https://icons.getbootstrap.com/icons/house-fill.svg);
+    }
+
+.icon-profile {
+    background-image: url(https://icons.getbootstrap.com/icons/file-person-fill.svg);
+}
+
+    .icon-profile:hover,
+    .icon-profile:focus {
+        background-image: url(https://icons.getbootstrap.com/icons/file-person-fill.svg);
+    }
+
+.icon-comment {
+    background-image: url(https://icons.getbootstrap.com/icons/chat-text-fill.svg);
+}
+
+    .icon-comment:hover,
+    .icon-comment:focus {
+        background-image: url(https://icons.getbootstrap.com/icons/chat-text-fill.svg);
+    }
+
+.icon-like {
+    background-image: url(https://icons.getbootstrap.com/icons/star-fill.svg);
+}
+
+    .icon-like:hover,
+    .icon-like:focus {
+        background-image: url(https://icons.getbootstrap.com/icons/star-fill.svg);
     }

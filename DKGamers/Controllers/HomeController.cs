@@ -21,13 +21,22 @@ namespace DKGamers.Controllers
 
         public IActionResult Index()
         {
-            var GosterilecekHaberler = context.Haber.ToList();
-            GosterilecekHaberler.Reverse();
-            GosterilecekHaberler = GosterilecekHaberler.Take(5).ToList();
+            var haberler = context.Haber.ToList();
+            haberler.Reverse();
+
+            var oyunlar1 = context.Oyun.ToList();
+            oyunlar1 = oyunlar1.OrderByDescending(x => x.PiyasayaSurulmeTarihi).ToList();
+            oyunlar1 = oyunlar1.Take(5).ToList();
+
+            var oyunlar2 = context.Oyun.ToList();
+            oyunlar2 = oyunlar2.OrderByDescending(x => x.GoruntulenmeSayisi).ToList();
+            oyunlar2 = oyunlar2.Take(5).ToList();
 
             return View(new HaberListViewModel()
             {
-                haberler= GosterilecekHaberler
+                Haberler = haberler,
+                Oyunlar1 = oyunlar1,
+                Oyunlar2 = oyunlar2
             });
         }
         public IActionResult Detail(int id)
@@ -39,6 +48,7 @@ namespace DKGamers.Controllers
         {
             return View();
         }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

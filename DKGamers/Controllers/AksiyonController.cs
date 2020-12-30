@@ -8,25 +8,22 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DKGamers.Controllers
 {
-    
     public class AksiyonController : Controller
     {
         private Context context = new Context();
-        public IActionResult Cok()
-        {
-            List<Oyun> oyun = context.Oyun.Include(i => i.OyunKategorileri).ThenInclude(t => t.Kategori).ToList();
-
-            return View(new OyunListViewModel()
-            {
-                oyunlar = oyun
-            });
-        }
-
         public IActionResult Tek()
         {
             return View();
         }
 
-       
+        public IActionResult Cok()
+        {
+            var oyunlar = context.Oyun.Include(i => i.OyunKategorileri).ThenInclude(i => i.Kategori.KategoriID == 2).ToList();
+
+            return View(new OyunListViewModel()
+            {
+                Oyunlar = oyunlar
+            });
+        }
     }
 }
