@@ -22,6 +22,9 @@ namespace DKGamers.Models
         public int BegenilmeSayisi { get; set; }
 
         public int GoruntulenmeSayisi { get; set; }
+        //public List<string> YapilanYorumlar { get; set; }
         public IList<OyunKategorisi> OyunKategorileri { get; set; }
+
+
     }
 }

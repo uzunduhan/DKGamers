@@ -3,16 +3,18 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using DKGamers.Identity;
 
 namespace DKGamers.Models
 {
-    public class OyunKategorisi
+    public class Yorum
     {
         [Key]
+        public int YorumID { get; set; }
+        public string YapilanYorum { get; set; }
         public int OyunID { get; set; }
         public Oyun Oyun { get; set; }
-
-        public int KategoriID { get; set; }
-        public Kategori Kategori { get; set; }
+        public string KullaniciAdi { get; set; }
+        public Kullanici Kullanici { get; set; }
     }
 }
