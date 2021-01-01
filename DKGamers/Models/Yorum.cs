@@ -12,9 +12,9 @@ namespace DKGamers.Models
         [Key]
         public int YorumID { get; set; }
         public string YapilanYorum { get; set; }
+        public DateTime OlusturulmaTarihi { get; set; }
         public int OyunID { get; set; }
         public Oyun Oyun { get; set; }
         public string KullaniciAdi { get; set; }
-        public Kullanici Kullanici { get; set; }
     }
 }

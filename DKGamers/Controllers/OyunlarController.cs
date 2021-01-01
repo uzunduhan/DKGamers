@@ -1,50 +1,47 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DKGamers.Data;
+using DKGamers.Identity;
+using DKGamers.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using DKGamers.Models;
-using Microsoft.EntityFrameworkCore;
-using DKGamers.Data;
-using Microsoft.AspNetCore.Identity;
-using DKGamers.Identity;
 
 namespace DKGamers.Controllers
 {
-    public class YeniController : Controller
+    public class OyunlarController : Controller
     {
         private Context context = new Context();
-
         private UserManager<Kullanici> kullaniciYoneticisi;
-        public YeniController(UserManager<Kullanici> _kullaniciYoneticisi)
+        public OyunlarController(UserManager<Kullanici> _kullaniciYoneticisi)
         {
             kullaniciYoneticisi = _kullaniciYoneticisi;
         }
         public IActionResult Index()
         {
-            var oyunlar = context.Oyun.ToList();
-            oyunlar = oyunlar.OrderByDescending(x => x.PiyasayaSurulmeTarihi).ToList();
-            oyunlar = oyunlar.Take(10).ToList();
-          
+            var oyunlar = context.Oyun.OrderBy(o => o.OyunAdi).ToList();
+
             return View(new OyunListViewModel()
             {
                 Oyunlar = oyunlar
-        
             });
         }
+        [HttpGet]
         public IActionResult Detail(int id)
         {
             Oyun oyun = context.Oyun.Include(i => i.OyunKategorileri).ThenInclude(i => i.Kategori).FirstOrDefault(i => i.OyunID == id);
             var yorumlar = context.Yorum.Include(i => i.Oyun).Where(i => i.OyunID == id).ToList();
-            var favorilerdemi = context.Favori.Any(i => i.Oyun.OyunID == id);
+            var favorilerdemi = context.Favori.Any(i => i.Oyun.OyunID==id);
             return View(new OyunDetailViewModel()
             {
                 Oyun = oyun,
                 Yorumlar = yorumlar,
-                favorilerdemi = favorilerdemi
+                favorilerdemi=favorilerdemi
+
             });
         }
-
         [HttpPost]
         public IActionResult CreateComment(YorumModel model)
         {
@@ -58,7 +55,7 @@ namespace DKGamers.Controllers
             };
             context.Yorum.Add(Yorum);
             context.SaveChanges();
-            return Redirect("/Yeni/Detail/" + model.OyunID);
+            return Redirect("/Oyunlar/Detail/" + model.OyunID);
         }
     }
 }

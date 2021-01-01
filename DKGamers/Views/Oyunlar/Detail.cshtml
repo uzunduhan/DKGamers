@@ -18,14 +18,16 @@
             <p style="color:white;">Geliştirici: @Model.Oyun.Gelistirici</p>
             <p style="color:white;">Yayıncı: @Model.Oyun.Yayinci</p>
             <p style="color:white;">Açıklama: @Model.Oyun.Aciklama</p>
-            <p style="color:white;">Görüntülenme Sayısı: @Model.Oyun.GoruntulenmeSayisi</p>
-            @if (Model.favorilerdemi)
+            @if (User.Identity.IsAuthenticated)
             {
-                <a href="/Favori/FavoridenCikar/@Model.Oyun.OyunID" class="btn btn-danger btn-circle text-uppercase"><span class="glyphicon glyphicon-send">Favorilerden Kaldır</span></a>
-            }
-            else
-            {
-                <a href="/Favori/FavoriyeEkle/@Model.Oyun.OyunID" class="btn btn-success btn-circle text-uppercase"><span class="glyphicon glyphicon-send">Favorilere Ekle</span></a>
+                @if (Model.favorilerdemi)
+                {
+                    <a href="/Favori/FavoridenCikar/@Model.Oyun.OyunID" class="btn btn-danger btn-circle text-uppercase"><span class="glyphicon glyphicon-send">Favorilerden Kaldır</span></a>
+                }
+                else
+                {
+                    <a href="/Favori/FavoriyeEkle/@Model.Oyun.OyunID" class="btn btn-success btn-circle text-uppercase"><span class="glyphicon glyphicon-send">Favorilere Ekle</span></a>
+                }
             }
         </div>
     </div>
@@ -55,13 +57,13 @@
             {
                 <div class="row" style="margin-top:1%">
                     <div style="padding:5px;">
-                            <p style="color:white;">@item.KullaniciAdi</p>
+                        <p style="color:white;">@item.KullaniciAdi</p>
                     </div>
                 </div>
-               
+
                 <div class="row border-bottom border-dark">
-                   <div>
-                          <p style="color:white;">@item.YapilanYorum</p>
+                    <div>
+                        <p style="color:white;">@item.YapilanYorum</p>
                     </div>
                 </div>
             }

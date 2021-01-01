@@ -553,73 +553,41 @@ namespace DKGamers.Data
                 {
                     KategoriID = 1,
                     KategoriAdi = "Aksiyon",
-                    OyunTuru = "Tek"
                 },
                 new Kategori()
                 {
                     KategoriID = 2,
-                    KategoriAdi = "Aksiyon",
-                    OyunTuru = "Cok"
+                    KategoriAdi = "Korku",
                 },
                 new Kategori()
                 {
                     KategoriID = 3,
-                    KategoriAdi = "Korku",
-                    OyunTuru = "Tek"
+                    KategoriAdi = "Spor/Yarış",
                 },
                 new Kategori()
                 {
                     KategoriID = 4,
-                    KategoriAdi = "Korku",
-                    OyunTuru = "Cok"
+                    KategoriAdi = "Strateji",
                 },
                 new Kategori()
                 {
                     KategoriID = 5,
-                    KategoriAdi = "Spor/Yaris",
-                    OyunTuru = "Tek"
+                    KategoriAdi = "Simülasyon",
                 },
                 new Kategori()
                 {
                     KategoriID = 6,
-                    KategoriAdi = "Spor/Yaris",
-                    OyunTuru = "Cok"
+                    KategoriAdi = "Hayatta Kalma",
                 },
                 new Kategori()
                 {
                     KategoriID = 7,
-                    KategoriAdi = "Strateji",
-                    OyunTuru = "Tek"
+                    KategoriAdi = "Tek Oyunculu",
                 },
                 new Kategori()
                 {
                     KategoriID = 8,
-                    KategoriAdi = "Strateji",
-                    OyunTuru = "Cok"
-                },
-                new Kategori()
-                {
-                    KategoriID = 9,
-                    KategoriAdi = "Simulasyon",
-                    OyunTuru = "Tek"
-                },
-                new Kategori()
-                {
-                    KategoriID = 10,
-                    KategoriAdi = "Simulasyon",
-                    OyunTuru = "Cok"
-                },
-                new Kategori()
-                {
-                    KategoriID = 11,
-                    KategoriAdi = "Hayatta Kalma",
-                    OyunTuru = "Tek"
-                },
-                new Kategori()
-                {
-                    KategoriID = 12,
-                    KategoriAdi = "Hayatta Kalma",
-                    OyunTuru = "Cok"
+                    KategoriAdi = "Çok Oyunculu",
                 }
             );
             modelBuilder.Entity<OyunKategorisi>().HasData(
@@ -630,13 +598,28 @@ namespace DKGamers.Data
                 },
                 new OyunKategorisi()
                 {
+                    OyunID = 1,
+                    KategoriID = 7
+                },
+                new OyunKategorisi()
+                {
                     OyunID = 2,
                     KategoriID = 1
                 },
                 new OyunKategorisi()
                 {
                     OyunID = 2,
-                    KategoriID = 2
+                    KategoriID = 4
+                },
+                new OyunKategorisi()
+                {
+                    OyunID = 2,
+                    KategoriID = 7
+                },
+                new OyunKategorisi()
+                {
+                    OyunID = 2,
+                    KategoriID = 8
                 },
                 new OyunKategorisi()
                 {
@@ -646,7 +629,7 @@ namespace DKGamers.Data
                 new OyunKategorisi()
                 {
                     OyunID = 3,
-                    KategoriID = 2
+                    KategoriID = 4
                 },
                 new OyunKategorisi()
                 {
@@ -666,12 +649,17 @@ namespace DKGamers.Data
                 new OyunKategorisi()
                 {
                     OyunID = 4,
-                    KategoriID = 3
+                    KategoriID = 2
                 },
                 new OyunKategorisi()
                 {
                     OyunID = 4,
-                    KategoriID = 11
+                    KategoriID = 6
+                },
+                new OyunKategorisi()
+                {
+                    OyunID = 4,
+                    KategoriID = 7
                 },
                 new OyunKategorisi()
                 {
@@ -681,7 +669,12 @@ namespace DKGamers.Data
                 new OyunKategorisi()
                 {
                     OyunID = 5,
-                    KategoriID = 2
+                    KategoriID = 7
+                },
+                new OyunKategorisi()
+                {
+                    OyunID = 5,
+                    KategoriID = 8
                 },
                 new OyunKategorisi()
                 {
@@ -690,13 +683,23 @@ namespace DKGamers.Data
                 },
                 new OyunKategorisi()
                 {
+                    OyunID = 6,
+                    KategoriID = 7
+                },
+                new OyunKategorisi()
+                {
                     OyunID = 7,
                     KategoriID = 1
                 },
                 new OyunKategorisi()
                 {
                     OyunID = 7,
-                    KategoriID = 2
+                    KategoriID = 4
+                },
+                new OyunKategorisi()
+                {
+                    OyunID = 7,
+                    KategoriID = 5
                 },
                 new OyunKategorisi()
                 {
@@ -710,23 +713,18 @@ namespace DKGamers.Data
                 },
                 new OyunKategorisi()
                 {
-                    OyunID = 7,
-                    KategoriID = 9
+                    OyunID = 8,
+                    KategoriID = 1
                 },
-                new OyunKategorisi()
-                {
-                    OyunID = 7,
-                    KategoriID = 10
-                },
-               new OyunKategorisi()
-               {
-                   OyunID = 8,
-                   KategoriID = 1
-               },
                 new OyunKategorisi()
                 {
                     OyunID = 8,
-                    KategoriID = 2
+                    KategoriID = 4
+                },
+                new OyunKategorisi()
+                {
+                    OyunID = 8,
+                    KategoriID = 5
                 },
                 new OyunKategorisi()
                 {
@@ -740,13 +738,13 @@ namespace DKGamers.Data
                 },
                 new OyunKategorisi()
                 {
-                    OyunID = 8,
-                    KategoriID = 9
+                    OyunID = 9,
+                    KategoriID = 3
                 },
                 new OyunKategorisi()
                 {
-                    OyunID = 8,
-                    KategoriID = 10
+                    OyunID = 9,
+                    KategoriID = 4
                 },
                 new OyunKategorisi()
                 {
@@ -756,11 +754,6 @@ namespace DKGamers.Data
                 new OyunKategorisi()
                 {
                     OyunID = 9,
-                    KategoriID = 6
-                },
-                new OyunKategorisi()
-                {
-                    OyunID = 9,
                     KategoriID = 7
                 },
                 new OyunKategorisi()
@@ -770,13 +763,13 @@ namespace DKGamers.Data
                 },
                 new OyunKategorisi()
                 {
-                    OyunID = 9,
-                    KategoriID = 9
+                    OyunID = 10,
+                    KategoriID = 4
                 },
                 new OyunKategorisi()
                 {
-                    OyunID = 9,
-                    KategoriID = 10
+                    OyunID = 10,
+                    KategoriID = 5
                 },
                 new OyunKategorisi()
                 {
@@ -785,8 +778,13 @@ namespace DKGamers.Data
                 },
                 new OyunKategorisi()
                 {
-                    OyunID = 10,
-                    KategoriID = 9
+                    OyunID = 11,
+                    KategoriID = 4
+                },
+                new OyunKategorisi()
+                {
+                    OyunID = 11,
+                    KategoriID = 5
                 },
                 new OyunKategorisi()
                 {
@@ -800,13 +798,8 @@ namespace DKGamers.Data
                 },
                 new OyunKategorisi()
                 {
-                    OyunID = 11,
-                    KategoriID = 9
-                },
-                new OyunKategorisi()
-                {
-                    OyunID = 11,
-                    KategoriID = 10
+                    OyunID = 12,
+                    KategoriID = 2
                 },
                 new OyunKategorisi()
                 {
@@ -821,27 +814,42 @@ namespace DKGamers.Data
                 new OyunKategorisi()
                 {
                     OyunID = 13,
-                    KategoriID = 7
+                    KategoriID = 4
                 },
                 new OyunKategorisi()
                 {
                     OyunID = 13,
-                    KategoriID = 9
+                    KategoriID = 5
+                },
+                new OyunKategorisi()
+                {
+                    OyunID = 13,
+                    KategoriID = 7
                 },
                 new OyunKategorisi()
                 {
                     OyunID = 14,
-                    KategoriID = 9
+                    KategoriID = 5
+                },
+                new OyunKategorisi()
+                {
+                    OyunID = 14,
+                    KategoriID = 7
+                },
+                new OyunKategorisi()
+                {
+                    OyunID = 15,
+                    KategoriID = 3
+                },
+                new OyunKategorisi()
+                {
+                    OyunID = 15,
+                    KategoriID = 4
                 },
                 new OyunKategorisi()
                 {
                     OyunID = 15,
                     KategoriID = 5
-                },
-                new OyunKategorisi()
-                {
-                    OyunID = 15,
-                    KategoriID = 6
                 },
                 new OyunKategorisi()
                 {
@@ -855,13 +863,8 @@ namespace DKGamers.Data
                 },
                 new OyunKategorisi()
                 {
-                    OyunID = 15,
-                    KategoriID = 9
-                },
-                new OyunKategorisi()
-                {
-                    OyunID = 15,
-                    KategoriID = 10
+                    OyunID = 16,
+                    KategoriID = 3
                 },
                 new OyunKategorisi()
                 {
@@ -871,17 +874,17 @@ namespace DKGamers.Data
                 new OyunKategorisi()
                 {
                     OyunID = 16,
-                    KategoriID = 6
+                    KategoriID = 7
                 },
                 new OyunKategorisi()
                 {
                     OyunID = 16,
-                    KategoriID = 9
+                    KategoriID = 8
                 },
                 new OyunKategorisi()
                 {
-                    OyunID = 16,
-                    KategoriID = 10
+                    OyunID = 17,
+                    KategoriID = 3
                 },
                 new OyunKategorisi()
                 {
@@ -891,17 +894,17 @@ namespace DKGamers.Data
                 new OyunKategorisi()
                 {
                     OyunID = 17,
-                    KategoriID = 6
+                    KategoriID = 7
                 },
                 new OyunKategorisi()
                 {
                     OyunID = 17,
-                    KategoriID = 9
+                    KategoriID = 8
                 },
                 new OyunKategorisi()
                 {
-                    OyunID = 17,
-                    KategoriID = 10
+                    OyunID = 18,
+                    KategoriID = 3
                 },
                 new OyunKategorisi()
                 {
@@ -911,17 +914,12 @@ namespace DKGamers.Data
                 new OyunKategorisi()
                 {
                     OyunID = 18,
-                    KategoriID = 6
+                    KategoriID = 7
                 },
                 new OyunKategorisi()
                 {
                     OyunID = 18,
-                    KategoriID = 9
-                },
-                new OyunKategorisi()
-                {
-                    OyunID = 18,
-                    KategoriID = 10
+                    KategoriID = 8
                 },
                 new OyunKategorisi()
                 {
@@ -931,27 +929,37 @@ namespace DKGamers.Data
                 new OyunKategorisi()
                 {
                     OyunID = 19,
-                    KategoriID = 2
+                    KategoriID = 3
                 },
                 new OyunKategorisi()
                 {
                     OyunID = 19,
-                    KategoriID = 5
+                    KategoriID = 7
                 },
                 new OyunKategorisi()
                 {
                     OyunID = 19,
-                    KategoriID = 6
+                    KategoriID = 8
                 },
                 new OyunKategorisi()
                 {
                     OyunID = 20,
-                    KategoriID = 5
+                    KategoriID = 3
                 },
                 new OyunKategorisi()
                 {
                     OyunID = 20,
-                    KategoriID = 6
+                    KategoriID = 7
+                },
+                new OyunKategorisi()
+                {
+                    OyunID = 20,
+                    KategoriID = 8
+                },
+                new OyunKategorisi()
+                {
+                    OyunID = 21,
+                    KategoriID = 3
                 },
                 new OyunKategorisi()
                 {
@@ -961,17 +969,12 @@ namespace DKGamers.Data
                 new OyunKategorisi()
                 {
                     OyunID = 21,
-                    KategoriID = 6
+                    KategoriID = 7
                 },
                 new OyunKategorisi()
                 {
                     OyunID = 21,
-                    KategoriID = 9
-                },
-                new OyunKategorisi()
-                {
-                    OyunID = 21,
-                    KategoriID = 10
+                    KategoriID = 8
                 },
                 new OyunKategorisi()
                 {
@@ -981,72 +984,67 @@ namespace DKGamers.Data
                 new OyunKategorisi()
                 {
                     OyunID = 22,
-                    KategoriID = 2
+                    KategoriID = 3
                 },
                 new OyunKategorisi()
                 {
                     OyunID = 22,
+                    KategoriID = 7
+                },
+                new OyunKategorisi()
+                {
+                    OyunID = 22,
+                    KategoriID = 8
+                },
+                new OyunKategorisi()
+                {
+                    OyunID = 23,
+                    KategoriID = 1
+                },
+                new OyunKategorisi()
+                {
+                    OyunID = 23,
+                    KategoriID = 2
+                },
+                new OyunKategorisi()
+                {
+                    OyunID = 23,
                     KategoriID = 5
                 },
                 new OyunKategorisi()
                 {
-                    OyunID = 22,
+                    OyunID = 23,
                     KategoriID = 6
                 },
                 new OyunKategorisi()
                 {
                     OyunID = 23,
-                    KategoriID = 1
+                    KategoriID = 7
                 },
                 new OyunKategorisi()
                 {
                     OyunID = 23,
+                    KategoriID = 8
+                },
+                new OyunKategorisi()
+                {
+                    OyunID = 24,
+                    KategoriID = 1
+                },
+                new OyunKategorisi()
+                {
+                    OyunID = 24,
                     KategoriID = 2
                 },
                 new OyunKategorisi()
                 {
-                    OyunID = 23,
-                    KategoriID = 3
-                },
-                new OyunKategorisi()
-                {
-                    OyunID = 23,
-                    KategoriID = 4
-                },
-                new OyunKategorisi()
-                {
-                    OyunID = 23,
-                    KategoriID = 9
-                },
-                new OyunKategorisi()
-                {
-                    OyunID = 23,
-                    KategoriID = 10
-                },
-                new OyunKategorisi()
-                {
-                    OyunID = 23,
-                    KategoriID = 11
-                },
-                new OyunKategorisi()
-                {
-                    OyunID = 23,
-                    KategoriID = 12
+                    OyunID = 24,
+                    KategoriID = 6
                 },
                 new OyunKategorisi()
                 {
                     OyunID = 24,
-                    KategoriID = 1
-                },
-                new OyunKategorisi()
-                {
-                    OyunID = 24,
-                    KategoriID = 3
-                },
-                new OyunKategorisi()
-                {
-                    OyunID = 24,
-                    KategoriID = 11
+                    KategoriID = 7
                 },
                 new OyunKategorisi()
                 {
@@ -1056,12 +1054,22 @@ namespace DKGamers.Data
                 new OyunKategorisi()
                 {
                     OyunID = 25,
-                    KategoriID = 3
+                    KategoriID = 2
                 },
                 new OyunKategorisi()
                 {
                     OyunID = 25,
-                    KategoriID = 11
+                    KategoriID = 6
+                },
+                new OyunKategorisi()
+                {
+                    OyunID = 25,
+                    KategoriID = 7
+                },
+                new OyunKategorisi()
+                {
+                    OyunID = 26,
+                    KategoriID = 1
                 },
                 new OyunKategorisi()
                 {
@@ -1071,37 +1079,32 @@ namespace DKGamers.Data
                 new OyunKategorisi()
                 {
                     OyunID = 26,
-                    KategoriID = 4
+                    KategoriID = 8
                 },
                 new OyunKategorisi()
                 {
                     OyunID = 27,
-                    KategoriID = 3
+                    KategoriID = 2
                 },
                 new OyunKategorisi()
                 {
                     OyunID = 27,
-                    KategoriID = 4
+                    KategoriID = 5
                 },
                 new OyunKategorisi()
                 {
                     OyunID = 27,
-                    KategoriID = 9
+                    KategoriID = 6
                 },
                 new OyunKategorisi()
                 {
                     OyunID = 27,
-                    KategoriID = 10
+                    KategoriID = 7
                 },
                 new OyunKategorisi()
                 {
                     OyunID = 27,
-                    KategoriID = 11
-                },
-                new OyunKategorisi()
-                {
-                    OyunID = 27,
-                    KategoriID = 12
+                    KategoriID = 8
                 },
                 new OyunKategorisi()
                 {
@@ -1116,27 +1119,37 @@ namespace DKGamers.Data
                 new OyunKategorisi()
                 {
                     OyunID = 28,
-                    KategoriID = 3
+                    KategoriID = 6
                 },
                 new OyunKategorisi()
                 {
                     OyunID = 28,
-                    KategoriID = 4
+                    KategoriID = 7
                 },
                 new OyunKategorisi()
                 {
                     OyunID = 28,
-                    KategoriID = 11
-                },
-                new OyunKategorisi()
-                {
-                    OyunID = 28,
-                    KategoriID = 12
+                    KategoriID = 8
                 },
                 new OyunKategorisi()
                 {
                     OyunID = 29,
-                    KategoriID = 2
+                    KategoriID = 1
+                },
+                new OyunKategorisi()
+                {
+                    OyunID = 29,
+                    KategoriID = 4
+                },
+                new OyunKategorisi()
+                {
+                    OyunID = 29,
+                    KategoriID = 5
+                },
+                new OyunKategorisi()
+                {
+                    OyunID = 29,
+                    KategoriID = 6
                 },
                 new OyunKategorisi()
                 {
@@ -1145,13 +1158,8 @@ namespace DKGamers.Data
                 },
                 new OyunKategorisi()
                 {
-                    OyunID = 29,
-                    KategoriID = 10
-                },
-                new OyunKategorisi()
-                {
-                    OyunID = 29,
-                    KategoriID = 12
+                    OyunID = 30,
+                    KategoriID = 3
                 },
                 new OyunKategorisi()
                 {
@@ -1161,20 +1169,14 @@ namespace DKGamers.Data
                 new OyunKategorisi()
                 {
                     OyunID = 30,
-                    KategoriID = 6
+                    KategoriID = 7
                 },
                 new OyunKategorisi()
                 {
                     OyunID = 30,
-                    KategoriID = 9
-                },
-                new OyunKategorisi()
-                {
-                    OyunID = 30,
-                    KategoriID = 10
+                    KategoriID = 8
                 }
             );
         }
     }
 }
-

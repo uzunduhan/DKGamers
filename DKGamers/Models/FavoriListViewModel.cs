@@ -5,10 +5,8 @@ using System.Threading.Tasks;
 
 namespace DKGamers.Models
 {
-    public class OyunListViewModel
+    public class FavoriListViewModel
     {
-        internal bool favorilerdemi;
-
-        public List<Oyun> Oyunlar { get; set; }
+        public List<Favori> Favoriler { get; set; }
     }
 }

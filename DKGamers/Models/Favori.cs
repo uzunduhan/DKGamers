@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace DKGamers.Models
 {
-    public class Kategori
+    public class Favori
     {
         [Key]
-        public int KategoriID { get; set; }
-        public string KategoriAdi { get; set; }
-        public IList<OyunKategorisi> OyunKategorileri { get; set; }
+        public int FavoriID { get; set; }
+        public string KullaniciAdi { get; set; }
+        public int OyunID { get; set; }
+        public Oyun Oyun { get; set; }
     }
 }

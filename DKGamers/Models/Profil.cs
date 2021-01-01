@@ -7,20 +7,12 @@ using System.Threading.Tasks;
 
 namespace DKGamers.Models
 {
-    [Authorize(Roles = "User")]
-    public class Giris
+    [Authorize(Roles = "user")]
+    public class Profil
     {
         [Key]
         public string KullaniciID { get; set; }
-
-        [Required]
-        [DataType(DataType.EmailAddress)]
-        public string Email { get; set; }
-
-        [Required]
-        [DataType(DataType.Password)]
-        public string Sifre { get; set; }
         public string KullaniciAdi { get; set; }
-        public string Url { get; set; }
+        public string Email { get; set; }
     }
 }

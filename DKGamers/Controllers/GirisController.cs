@@ -42,6 +42,10 @@ namespace DKGamers.Controllers
                     var result = await girisYoneticisi.PasswordSignInAsync(user, model.Sifre, false, false);
                     if (result.Succeeded)
                     {
+                        model.KullaniciID = user.Id;
+                        model.Email = user.Email;
+                        model.Sifre = user.PasswordHash;
+                        model.KullaniciAdi = user.UserName;
                         return Redirect(model.Url ?? "~/");
                     }
                     ModelState.AddModelError("", "E-Mail Adresi ya da Şifre Yanlış");
