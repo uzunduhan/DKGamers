@@ -10,8 +10,13 @@ namespace DKGamers.Models
     {
         [Key]
         public int HaberID { get; set; }
+        [Required]
         public string HaberResim { get; set; }
+        [Required]
         public string HaberBaslik { get; set; }
+        [Required]
         public string HaberIcerik { get; set; }
+        [Required]
+        public bool haberGosterilsinmi { get; set; }
     }
 }

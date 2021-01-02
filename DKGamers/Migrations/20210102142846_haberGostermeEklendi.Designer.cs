@@ -4,14 +4,16 @@ using DKGamers.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DKGamers.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20210102142846_haberGostermeEklendi")]
+    partial class haberGostermeEklendi
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -47,15 +49,12 @@ namespace DKGamers.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("HaberBaslik")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("HaberIcerik")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("HaberResim")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("haberGosterilsinmi")
@@ -173,32 +172,27 @@ namespace DKGamers.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("Aciklama")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("BegenilmeSayisi")
                         .HasColumnType("int");
 
                     b.Property<string>("Gelistirici")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("GoruntulenmeSayisi")
                         .HasColumnType("int");
 
                     b.Property<string>("OyunAdi")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("PiyasayaSurulmeTarihi")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Resim")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Yayinci")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("oyunGosterilsinmi")
@@ -1214,15 +1208,13 @@ namespace DKGamers.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("OlusturulmaTarihi")
-                        .HasMaxLength(100)
                         .HasColumnType("datetime2");
 
                     b.Property<int>("OyunID")
                         .HasColumnType("int");
 
                     b.Property<string>("YapilanYorum")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("YorumID");
 

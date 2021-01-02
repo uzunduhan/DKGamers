@@ -23,6 +23,7 @@ namespace DKGamers.Controllers
         public IActionResult Index()
         {
             var haberler = context.Haber.ToList();
+            haberler = haberler.Where(t => t.haberGosterilsinmi == false).ToList();
             haberler.Reverse();
 
             var oyunlar1 = context.Oyun.ToList();

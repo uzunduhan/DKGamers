@@ -40,6 +40,7 @@ namespace DKGamers
                 options.SignIn.RequireConfirmedEmail = false;
                 options.SignIn.RequireConfirmedPhoneNumber = false;
             });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

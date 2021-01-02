@@ -22,10 +22,10 @@ namespace DKGamers.Controllers
         }
         public IActionResult Index()
         {
-            var oyunlar = context.Oyun.ToList();
+            var oyunlar = context.Oyun.Where(t => t.oyunGosterilsinmi == false).ToList(); ;
             oyunlar = oyunlar.OrderByDescending(x => x.GoruntulenmeSayisi).ToList();
             oyunlar = oyunlar.Take(10).ToList();
-            
+
             return View(new OyunListViewModel()
             {
                 Oyunlar = oyunlar,

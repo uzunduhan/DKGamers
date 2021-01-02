@@ -22,6 +22,7 @@ namespace DKGamers.Controllers
         public IActionResult Index()
         {
             var oyunlar = context.Oyun.OrderBy(o => o.OyunAdi).ToList();
+            oyunlar = oyunlar.Where(t => t.oyunGosterilsinmi == false).ToList();
 
             return View(new OyunListViewModel()
             {
