@@ -490,32 +490,6 @@ namespace DKGamers.Data
                     "Jill Valentine, Umbrella'nın uyguladığı vahşete tanıklık eden Raccoon City'de kalan son insanlardan biridir. " +
                     "Umbrella onu durdurmak için büyük gizli silahı Nemesis'i kullanacaktır. 1999 yılında yayınlanan Resident Evil 3: Nemesis video oyunun yeniden yapılmış halidir.",
                     GoruntulenmeSayisi = 727
-                },
-                new Oyun()
-                {
-                    OyunID = 29,
-                    Resim = "oyun29.jpg",
-                    OyunAdi = "PlayerUnknown's Battlegrounds",
-                    PiyasayaSurulmeTarihi = new DateTime(2017, 12, 21),
-                    Yayinci = "Krafton",
-                    Gelistirici = "Krafton",
-                    Aciklama = "PlayerUnknown's Battlegrounds, oyunun sonunda hayatta kalmayı başarabilen tek bir oyuncunun kazanabildiği ve oyuncu topluluklarının görüşlerinin toplanarak ortaya çıkardığı bir oyundur. " +
-                    "Tüm oyuncular oyuna eşit şartlarda, kelimenin tam manasıyla hiçbir şeyleri olmadan başlarlar; haritanın çeşitli yerlerinde bulunan silah & ekipman ve gereçleri toplayarak tek başlarına hayatta kalma mücadelesi verirler. " +
-                    "UNREAL 4 Oyun Motoruna sahip, gerçekçi ve olağanüstü heyecanlı olan bu oyun, 8 kilometre karelik bir harita içerisinde oynanmaktadır. ",
-                    GoruntulenmeSayisi = 1608
-                },
-                new Oyun()
-                {
-                    OyunID = 30,
-                    Resim = "oyun30.jpg",
-                    OyunAdi = "MotoGP 2020",
-                    PiyasayaSurulmeTarihi = new DateTime(2020, 4, 23),
-                    Yayinci = "Milestone",
-                    Gelistirici = "Milestone",
-                    Aciklama = "MotoGP 20 ile iyice eksiksiz hale getirilmiş olan menajerlik kariyeri modunun tüm heyecanını yaşa ve 2020 sezonuna katılıp katılmayacağına karar vererek resmi sürücülerle yarış ya da tamamen yeni bir takıma katıl. " +
-                    "Motosikletini ve kıyafetini özelleştir! En iyi sponsor ve desen kombinasyonunu bul, renkleri ve malzemeleri seç. Her şeyi şık bir şekilde koordine et! Efsane sürücülerle yarış! " +
-                    "MotoGP tarihini yeniden yaşamana olanak sağlayan yeni tarihi içerik ve yeni bir oyun modu seni bekliyor. Arkadaşlarına meydan oku, özel etkinlikler oluştur ve ayrı sonucular tarafından desteklenen yeni çok oyunculu mod deneyimi sayesinde yarış direktörü ol!",
-                    GoruntulenmeSayisi = 108
                 }
             );
             modelBuilder.Entity<Kategori>().HasData(
@@ -1099,51 +1073,6 @@ namespace DKGamers.Data
                 new OyunKategorisi()
                 {
                     OyunID = 28,
-                    KategoriID = 8
-                },
-                new OyunKategorisi()
-                {
-                    OyunID = 29,
-                    KategoriID = 1
-                },
-                new OyunKategorisi()
-                {
-                    OyunID = 29,
-                    KategoriID = 4
-                },
-                new OyunKategorisi()
-                {
-                    OyunID = 29,
-                    KategoriID = 5
-                },
-                new OyunKategorisi()
-                {
-                    OyunID = 29,
-                    KategoriID = 6
-                },
-                new OyunKategorisi()
-                {
-                    OyunID = 29,
-                    KategoriID = 8
-                },
-                new OyunKategorisi()
-                {
-                    OyunID = 30,
-                    KategoriID = 3
-                },
-                new OyunKategorisi()
-                {
-                    OyunID = 30,
-                    KategoriID = 5
-                },
-                new OyunKategorisi()
-                {
-                    OyunID = 30,
-                    KategoriID = 7
-                },
-                new OyunKategorisi()
-                {
-                    OyunID = 30,
                     KategoriID = 8
                 }
             );
