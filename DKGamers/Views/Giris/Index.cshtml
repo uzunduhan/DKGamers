@@ -1,4 +1,5 @@
-﻿@model Giris
+﻿
+@model Giris
 
 <div class="container-fluid">
     <div class="row justify-content-center">
@@ -6,7 +7,7 @@
             <div class="login-form">
                 <form asp-controller="Giris" asp-action="Index" method="POST">
                     <div class="text-warning" asp-validation-summary="All">
-                        <h2 class="text-center" style="color:white;">Giriş Yap</h2>
+                        <h2 class="text-center" style="color:white;">@localizer["Giriş Yap"]</h2>
                         <div class="form-group">
                             <input asp-for="Email" type="text" class="form-control" placeholder="E-Mail Adresi" />
                         </div>
@@ -14,7 +15,7 @@
                             <input asp-for="Sifre" type="password" class="form-control" placeholder="Sifre" />
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-warning text-white btn-block">Giriş Yap</button>
+                            <button type="submit" class="btn btn-warning text-white btn-block">@localizer["Giriş Yap"]</button>
                         </div>
                     </div>
                 </form>

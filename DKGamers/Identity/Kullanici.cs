@@ -9,6 +9,6 @@ namespace DKGamers.Identity
 {
     public class Kullanici : IdentityUser
     {
-        public IList<Yorum> Yorumlar { get; set; }
+
     }
 }

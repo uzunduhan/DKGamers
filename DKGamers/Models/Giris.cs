@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DKGamers.Models
 {
-    [Authorize(Roles = "User")]
+    [Authorize(Roles = "user")]
     public class Giris
     {
         [Key]

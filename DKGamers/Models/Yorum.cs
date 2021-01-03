@@ -11,13 +11,12 @@ namespace DKGamers.Models
     {
         [Key]
         public int YorumID { get; set; }
-        [StringLength(100, MinimumLength = 10, ErrorMessage = "Yapacağınız yorum en az 10, en fazla 100 karakter olmalıdır")]
+        [Required]
         public string YapilanYorum { get; set; }
-        [StringLength(100, MinimumLength = 10, ErrorMessage = "Yapacağınız yorum en az 10, en fazla 100 karakter olmalıdır")]
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [Required]
         public DateTime OlusturulmaTarihi { get; set; }
         public int OyunID { get; set; }
+        [Required]
         public Oyun Oyun { get; set; }
         public string KullaniciAdi { get; set; }
     }

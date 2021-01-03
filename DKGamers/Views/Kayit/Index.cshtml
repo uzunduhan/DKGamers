@@ -6,7 +6,7 @@
             <div class="login-form">
                 <form asp-controller="Kayit" asp-action="Index" method="POST">
                     <div class="text-warning" asp-validation-summary="All"></div>
-                    <h2 class="text-center" style="color:white;">Kayıt Ol</h2>
+                    <h2 class="text-center" style="color:white;">@localizer["Kayıt Ol"]</h2>
                     <div class="form-group">
                         <input asp-for="KullaniciAdi" type="text" class="form-control" placeholder="Kullanıcı Adı" />
                     </div>
@@ -17,7 +17,7 @@
                         <input asp-for="Sifre" type="password" class="form-control" placeholder="Sifre" />
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-warning text-white btn-block">Kayıt Ol</button>
+                        <button type="submit" class="btn btn-warning text-white btn-block">@localizer["Kayıt Ol"]</button>
                     </div>
                 </form>
             </div>

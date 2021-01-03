@@ -22,10 +22,9 @@ namespace DKGamers.Models
         public string Gelistirici { get; set; }
         [Required]
         public string Aciklama { get; set; }
-        public int BegenilmeSayisi { get; set; }
         public int GoruntulenmeSayisi { get; set; }
         public IList<OyunKategorisi> OyunKategorileri { get; set; }
-       
+
         public List<Yorum> Yorumlar { get; set; }
         public bool oyunGosterilsinmi { get; set; }
     }

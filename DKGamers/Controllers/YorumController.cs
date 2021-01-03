@@ -11,18 +11,18 @@ using System.Threading.Tasks;
 
 namespace DKGamers.Controllers
 {
-
     public class YorumController : Controller
     {
-        private Context context = new Context();
+        private Context context;
         private UserManager<Kullanici> kullaniciYoneticisi;
-        public YorumController(UserManager<Kullanici> _kullaniciYoneticisi)
+        public YorumController(UserManager<Kullanici> _kullaniciYoneticisi, Context context)
         {
             kullaniciYoneticisi = _kullaniciYoneticisi;
+            this.context = context;
         }
         public IActionResult Index()
         {
-             var oyunlar = context.Oyun.ToList();
+            var oyunlar = context.Oyun.ToList();
             var user = kullaniciYoneticisi.FindByNameAsync(User.Identity.Name).Result;
             var yorumlar = context.Yorum.Where(i => i.KullaniciAdi == user.UserName).ToList();
             return View(yorumlar);

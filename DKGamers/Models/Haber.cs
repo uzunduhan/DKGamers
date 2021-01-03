@@ -10,7 +10,7 @@ namespace DKGamers.Models
     {
         [Key]
         public int HaberID { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Resim alanı boş bırakılamaz...")]
         public string HaberResim { get; set; }
         [Required]
         public string HaberBaslik { get; set; }

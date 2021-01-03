@@ -13,11 +13,12 @@ namespace DKGamers.Controllers
 {
     public class OyunlarController : Controller
     {
-        private Context context = new Context();
+        private Context context;
         private UserManager<Kullanici> kullaniciYoneticisi;
-        public OyunlarController(UserManager<Kullanici> _kullaniciYoneticisi)
+        public OyunlarController(UserManager<Kullanici> _kullaniciYoneticisi, Context context)
         {
             kullaniciYoneticisi = _kullaniciYoneticisi;
+            this.context = context;
         }
         public IActionResult Index()
         {
@@ -34,13 +35,15 @@ namespace DKGamers.Controllers
         {
             Oyun oyun = context.Oyun.Include(i => i.OyunKategorileri).ThenInclude(i => i.Kategori).FirstOrDefault(i => i.OyunID == id);
             var yorumlar = context.Yorum.Include(i => i.Oyun).Where(i => i.OyunID == id).ToList();
-            var favorilerdemi = context.Favori.Any(i => i.Oyun.OyunID==id);
+            var favorilerdemi = context.Favori.Any(i => i.Oyun.OyunID == id && i.KullaniciAdi == User.Identity.Name);
+            oyun.GoruntulenmeSayisi++;
+            context.Oyun.Update(oyun);
+            context.SaveChanges();
             return View(new OyunDetailViewModel()
             {
                 Oyun = oyun,
                 Yorumlar = yorumlar,
-                favorilerdemi=favorilerdemi
-
+                favorilerdemi = favorilerdemi
             });
         }
         [HttpPost]

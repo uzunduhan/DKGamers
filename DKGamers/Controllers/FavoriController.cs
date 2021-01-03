@@ -15,10 +15,11 @@ namespace DKGamers.Controllers
     {
         private UserManager<Kullanici> kullaniciYoneticisi;
         private Favori favori = new Favori();
-        private Context context = new Context();
-        public FavoriController(UserManager<Kullanici> _kullaniciYoneticisi)
+        private Context context;
+        public FavoriController(UserManager<Kullanici> _kullaniciYoneticisi, Context context)
         {
             kullaniciYoneticisi = _kullaniciYoneticisi;
+            this.context = context;
         }
         public IActionResult Index()
         {
@@ -32,10 +33,8 @@ namespace DKGamers.Controllers
 
         public IActionResult FavoriyeEkle(int id)
         {
-
             var user = kullaniciYoneticisi.FindByNameAsync(User.Identity.Name).Result;
-
-            if (!context.Favori.Any(i => i.OyunID == id))
+            if (!context.Favori.Any(i => i.OyunID == id && i.KullaniciAdi == user.UserName))
             {
 
                 var Favori = new Favori()
@@ -46,15 +45,14 @@ namespace DKGamers.Controllers
                 context.Add(Favori);
                 context.SaveChanges();
             }
-
             return RedirectToAction("Index");
         }
-    
+
         public IActionResult FavoridenCikar(int id)
         {
-            Favori oyun = context.Favori.FirstOrDefault(i => i.OyunID == id);
-            context.Remove(oyun);
-            context.SaveChanges();
+            var user = kullaniciYoneticisi.FindByNameAsync(User.Identity.Name).Result;
+            var cmd = "delete from Favori where KullaniciAdi=@p0 and OyunID=@p1";
+            context.Database.ExecuteSqlRaw(cmd, user.UserName, id);
 
             return RedirectToAction("Index");
         }
